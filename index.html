@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>פנינה שפלטר | מיילדת מוסמכת ויועצת הנקה IBCLC</title>
+  <meta name="description" content="פנינה שפלטר - מיילדת מוסמכת עם מעל 10 שנות ניסיון, יועצת הנקה מוסמכת (IBCLC) ובודקת טהרה מוסמכת. הכנה ללידה, ייעוץ הנקה ובדיקות טהרה.">
+  <meta name="keywords" content="מיילדת, יועצת הנקה, IBCLC, הכנה ללידה, בדיקת טהרה, פנינה שפלטר">
+  <meta property="og:title" content="פנינה שפלטר | מיילדת מוסמכת ויועצת הנקה IBCLC">
+  <meta property="og:description" content="מיילדת מוסמכת עם מעל 10 שנות ניסיון, יועצת הנקה מוסמכת (IBCLC) ובודקת טהרה מוסמכת.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://peninaspolter.com">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ===== CSS Reset & Variables ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #5c6b38;
+      --primary-dark: #4a5630;
+      --primary-light: rgba(92, 107, 56, 0.2);
+      --accent: #f5bd8d;
+      --accent-dark: #e8a76e;
+      --accent-light: rgba(245, 189, 141, 0.3);
+      --background: #faf9f6;
+      --background-warm: rgba(250, 249, 246, 0.95);
+      --text-dark: #3d3d3d;
+      --text-medium: #5a5a5a;
+      --text-light: #7a7a7a;
+      --border: #e8e5df;
+      --whatsapp: #25D366;
+      --whatsapp-dark: #20BA5A;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+      --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+      --radius-sm: 12px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --font-heading: 'Cormorant Garamond', Georgia, serif;
+      --font-body: 'Rubik', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-dark);
+      background-color: var(--background);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== Utility ===== */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      color: var(--text-light);
+      font-size: 1.1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    /* ===== Navigation ===== */
+    .navbar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 100;
+      background: var(--background-warm);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.3s;
+    }
+
+    .navbar.scrolled {
+      box-shadow: var(--shadow-sm);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: var(--primary);
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    .nav-logo img {
+      width: 40px;
+      height: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-medium);
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 0.95rem;
+      font-weight: 400;
+      transition: all 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    .lang-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: white;
+      font-size: 0.85rem;
+      cursor: pointer;
+      color: var(--text-medium);
+    }
+
+    .lang-toggle .active-lang { font-weight: 600; color: var(--primary); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-dark);
+      transition: all 0.3s;
+    }
+
+    /* ===== Hero Section ===== */
+    .hero {
+      display: flex;
+      align-items: center;
+      padding-top: 100px;
+      padding-bottom: 60px;
+      background: linear-gradient(rgba(250, 249, 246, 0.5), var(--background));
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+    }
+
+    .hero-image-wrapper::before {
+      content: '';
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      width: 100%;
+      height: 100%;
+      background: var(--accent-light);
+      border-radius: var(--radius-lg);
+      transform: rotate(-3deg);
+    }
+
+    .hero-image-wrapper::after {
+      content: '';
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      width: 100%;
+      height: 100%;
+      background: var(--primary-light);
+      border-radius: var(--radius-lg);
+      transform: rotate(2deg);
+    }
+
+    .hero-image {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 480px;
+      border-radius: var(--radius-lg);
+      object-fit: cover;
+      aspect-ratio: 3/3.5;
+    }
+
+    .hero-content {
+      text-align: right;
+    }
+
+    .hero-content h1 {
+      font-family: var(--font-heading);
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .hero-content h2 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      color: var(--text-medium);
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--accent);
+      color: #5c3d1e;
+      border: none;
+      padding: 18px 48px;
+      border-radius: var(--radius-lg);
+      font-size: 1.2rem;
+      font-weight: 500;
+      font-family: var(--font-body);
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s;
+      box-shadow: var(--shadow-md);
+      width: 100%;
+    }
+
+    .cta-button:hover {
+      background: var(--accent-dark);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .cta-button svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .kupot-note {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 16px;
+      padding: 14px 24px;
+      background: rgba(92, 107, 56, 0.08);
+      border-radius: var(--radius-md);
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
+    .kupot-note svg { width: 20px; height: 20px; flex-shrink: 0; }
+
+    /* ===== Services Section ===== */
+    .services {
+      padding: 80px 0;
+      background: var(--background);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+
+    .service-card {
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 32px 28px;
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+      text-align: right;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    .service-icon.birth { background: var(--primary-light); }
+    .service-icon.lactation { background: var(--accent-light); }
+    .service-icon.tahara { background: rgba(131, 121, 66, 0.2); }
+
+    .service-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: var(--text-medium);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* ===== Course Section ===== */
+    .course {
+      background: linear-gradient(135deg, rgba(92,107,56,0.1), rgba(245,189,141,0.1) 50%, rgba(131,121,66,0.1));
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      margin-top: 20px;
+    }
+
+    .course h3 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .course > p {
+      color: var(--text-medium);
+      margin-bottom: 32px;
+    }
+
+    .course-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .course-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 16px 20px;
+      background: rgba(255,255,255,0.8);
+      border-radius: var(--radius-sm);
+    }
+
+    .step-number {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    .course-step p {
+      color: var(--text-dark);
+      font-size: 0.95rem;
+    }
+
+    .course-note {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+      color: var(--primary);
+      font-size: 0.95rem;
+    }
+
+    /* ===== About Section ===== */
+    .about {
+      padding: 80px 0;
+      background: var(--background);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-image {
+      width: 100%;
+      max-width: 400px;
+      border-radius: var(--radius-lg);
+      object-fit: cover;
+      aspect-ratio: 3/3.5;
+    }
+
+    .about-content h2 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .about-content h3 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 24px;
+      font-weight: 500;
+    }
+
+    .about-content ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .about-content li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: var(--text-medium);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .about-content li::before {
+      content: '✦';
+      color: var(--primary);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* ===== Testimonials Section ===== */
+    .testimonials {
+      padding: 80px 0;
+      background: linear-gradient(rgba(250,249,246,0.5), var(--background));
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .testimonial-card {
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 32px;
+      border: 1px solid var(--border);
+      position: relative;
+    }
+
+    .testimonial-source {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .google-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    .testimonial-source span {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    .stars {
+      display: flex;
+      gap: 2px;
+      margin-bottom: 16px;
+      direction: ltr;
+    }
+
+    .star {
+      color: #FBBC04;
+      font-size: 1.1rem;
+    }
+
+    .testimonial-card blockquote {
+      color: var(--text-medium);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      font-style: normal;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .author-name {
+      font-weight: 500;
+      color: var(--text-dark);
+      font-size: 0.95rem;
+    }
+
+    /* ===== Contact Section ===== */
+    .contact {
+      padding: 80px 0;
+      background: var(--background);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+    }
+
+    .contact-info h2 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .contact-info > p {
+      color: var(--text-medium);
+      margin-bottom: 32px;
+    }
+
+    .contact-subtitle {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 20px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      color: var(--text-dark);
+      transition: all 0.2s;
+    }
+
+    .contact-link:hover {
+      border-color: var(--primary);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-link-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .contact-link-icon.phone { background: var(--primary-light); }
+    .contact-link-icon.email { background: var(--accent-light); }
+    .contact-link-icon.wa { background: rgba(37, 211, 102, 0.15); }
+
+    .contact-link-label {
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+
+    .contact-link-value {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    /* ===== Contact Form ===== */
+    .contact-form-wrapper {
+      background: white;
+      border-radius: var(--radius-md);
+      padding: 36px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-group label {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    .form-group label .required { color: #c53030; }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--text-dark);
+      background: var(--background);
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px var(--primary-light);
+    }
+
+    .form-group textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .submit-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 14px 32px;
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      font-weight: 500;
+      font-family: var(--font-body);
+      cursor: pointer;
+      transition: all 0.3s;
+      width: 100%;
+    }
+
+    .submit-button:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--primary);
+    }
+
+    .form-success.show {
+      display: block;
+    }
+
+    .form-success h3 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    /* ===== Footer ===== */
+    .footer {
+      background: var(--primary);
+      color: white;
+      padding: 40px 0 24px;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: white;
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .footer-logo img {
+      width: 36px;
+      filter: brightness(10);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--accent); }
+
+    .footer-contact {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-contact a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-contact a:hover { color: var(--accent); }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* ===== WhatsApp Float ===== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      left: 24px;
+      z-index: 90;
+      width: 60px;
+      height: 60px;
+      background: var(--whatsapp);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+      transition: all 0.3s;
+    }
+
+    .whatsapp-float:hover {
+      background: var(--whatsapp-dark);
+      transform: scale(1.1);
+    }
+
+    .whatsapp-float svg { width: 32px; height: 32px; }
+
+    /* ===== Mobile Menu ===== */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px;
+      right: 0;
+      left: 0;
+      background: var(--background-warm);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px;
+      z-index: 99;
+      box-shadow: var(--shadow-md);
+    }
+
+    .mobile-menu.open { display: block; }
+
+    .mobile-menu a {
+      display: block;
+      padding: 12px 16px;
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: var(--radius-sm);
+      transition: background 0.2s;
+    }
+
+    .mobile-menu a:hover { background: var(--primary-light); }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 968px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-content { text-align: center; }
+      .hero-content h1 { font-size: 2.5rem; }
+      .hero-content h2 { font-size: 1.5rem; }
+
+      .hero-image-wrapper {
+        max-width: 350px;
+        margin: 0 auto;
+        order: -1;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .course { padding: 32px 24px; }
+
+      .about-image {
+        max-width: 300px;
+        margin: 0 auto;
+      }
+
+      .section-title { font-size: 2rem; }
+
+      .kupot-note { font-size: 0.85rem; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-content h1 { font-size: 2rem; }
+      .hero-content h2 { font-size: 1.3rem; }
+      .cta-button { padding: 16px 32px; font-size: 1.05rem; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-links { flex-wrap: wrap; justify-content: center; }
+      .footer-contact { flex-direction: column; align-items: center; }
+    }
+
+    /* ===== English override ===== */
+    html[dir="ltr"] { direction: ltr; }
+    html[dir="ltr"] .hero-content,
+    html[dir="ltr"] .service-card,
+    html[dir="ltr"] .about-content,
+    html[dir="ltr"] .contact-info { text-align: left; }
+    html[dir="ltr"] .stars { direction: ltr; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <span>פנינה שפלטר</span>
+        <img src="images/logo.png" alt="לוגו פנינה שפלטר">
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">בית</a></li>
+        <li><a href="#services">שירותים</a></li>
+        <li><a href="#about">אודות</a></li>
+        <li><a href="#testimonials">המלצות</a></li>
+        <li><a href="#contact">צור קשר</a></li>
+        <li>
+          <button class="lang-toggle" onclick="toggleLanguage()">
+            <span id="langHe" class="active-lang">עב</span>
+            <span>|</span>
+            <span id="langEn">EN</span>
+          </button>
+        </li>
+      </ul>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="תפריט">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" onclick="closeMenu()">בית</a>
+    <a href="#services" onclick="closeMenu()">שירותים</a>
+    <a href="#about" onclick="closeMenu()">אודות</a>
+    <a href="#testimonials" onclick="closeMenu()">המלצות</a>
+    <a href="#contact" onclick="closeMenu()">צור קשר</a>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-image-wrapper">
+          <img src="images/penina-photo.jpg" alt="פנינה שפלטר - מיילדת מוסמכת" class="hero-image" loading="eager">
+        </div>
+        <div class="hero-content">
+          <h1 data-he="ליווי מקצועי, רגיש ובטוח" data-en="Professional, Sensitive & Safe Care">ליווי מקצועי, רגיש ובטוח</h1>
+          <h2 data-he="מההיריון ועד להנקה" data-en="From Pregnancy to Breastfeeding">מההיריון ועד להנקה</h2>
+          <p data-he="מיילדת מוסמכת עם מעל 10 שנות ניסיון בחדרי לידה, יועצת הנקה מוסמכת (IBCLC) ובודקת טהרה מוסמכת." data-en="Certified midwife with over 10 years of experience in delivery rooms, certified lactation consultant (IBCLC), and certified tahara examiner.">מיילדת מוסמכת עם מעל 10 שנות ניסיון בחדרי לידה, יועצת הנקה מוסמכת (IBCLC) ובודקת טהרה מוסמכת.</p>
+          <a href="#contact" class="cta-button" data-he="קבעי שיחת ייעוץ" data-en="Book a Consultation">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+            <span>קבעי שיחת ייעוץ</span>
+          </a>
+          <div class="kupot-note">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span data-he="✓ ניתן לקבל החזר מקופות החולים" data-en="✓ Health insurance reimbursement available">✓ ניתן לקבל החזר מקופות החולים</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <h2 class="section-title" data-he="השירותים שלי" data-en="My Services">השירותים שלי</h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon birth">🤰</div>
+          <h3 data-he="הכנה ללידה" data-en="Birth Preparation">הכנה ללידה</h3>
+          <p data-he="קורסים אישיים או קבוצתיים: לידה ראשונה, לידה חוזרת, וקיסרי מתוכנן. ידע מעשי וכלים להתמודדות עם כאב." data-en="Individual or group courses: first birth, repeat birth, and planned cesarean. Practical knowledge and pain management tools.">קורסים אישיים או קבוצתיים: לידה ראשונה, לידה חוזרת, וקיסרי מתוכנן. ידע מעשי וכלים להתמודדות עם כאב.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon lactation">🤱</div>
+          <h3 data-he="ייעוץ הנקה" data-en="Lactation Consulting">ייעוץ הנקה</h3>
+          <p data-he="פתרון אתגרים בזמן אמת: הצמדה נכונה, הגברת חלב, חזרה לעבודה וליווי אישי מותאם לאם ולתינוק." data-en="Real-time problem solving: proper latch, increasing milk supply, return to work, and personalized support for mother and baby.">פתרון אתגרים בזמן אמת: הצמדה נכונה, הגברת חלב, חזרה לעבודה וליווי אישי מותאם לאם ולתינוק.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon tahara">🔍</div>
+          <h3 data-he="בדיקות טהרה" data-en="Tahara Examinations">בדיקות טהרה</h3>
+          <p data-he="בדיקה רפואית-הלכתית מקצועית, דיסקרטית ורגישה (מוסמכת מכון פועה)." data-en="Professional, discreet, and sensitive medical-halachic examination (certified by Puah Institute).">בדיקה רפואית-הלכתית מקצועית, דיסקרטית ורגישה (מוסמכת מכון פועה).</p>
+        </div>
+      </div>
+
+      <!-- Course Details -->
+      <div class="course">
+        <h3 data-he="הקורס המלא להכנה ללידה" data-en="Complete Birth Preparation Course">הקורס המלא להכנה ללידה</h3>
+        <p data-he="קורס בן מספר מפגשים לזוגות באופן פרטני, המעניק לכם ידע, כלים וביטחון לקראת הלידה." data-en="A multi-session private course for couples, providing knowledge, tools, and confidence for the birth.">קורס בן מספר מפגשים לזוגות באופן פרטני, המעניק לכם ידע, כלים וביטחון לקראת הלידה.</p>
+        <div class="course-steps">
+          <div class="course-step">
+            <div class="step-number">1</div>
+            <p data-he="שלבי הלידה – איך לזהותם ומה קורה בכל שלב" data-en="Stages of labor – how to identify them and what happens at each stage">שלבי הלידה – איך לזהותם ומה קורה בכל שלב</p>
+          </div>
+          <div class="course-step">
+            <div class="step-number">2</div>
+            <p data-he="שיטות להתמודדות עם כאב – נשימה, תנועה, ותמיכה רגשית" data-en="Pain management methods – breathing, movement, and emotional support">שיטות להתמודדות עם כאב – נשימה, תנועה, ותמיכה רגשית</p>
+          </div>
+          <div class="course-step">
+            <div class="step-number">3</div>
+            <p data-he="תפקיד בן/בת הזוג – איך להפוך למלווה פעיל ותומך" data-en="Partner's role – how to become an active and supportive companion">תפקיד בן/בת הזוג – איך להפוך למלווה פעיל ותומך</p>
+          </div>
+          <div class="course-step">
+            <div class="step-number">4</div>
+            <p data-he="חדר לידה – מה להביא וכל מה שקורה שם" data-en="Delivery room – what to bring and everything that happens there">חדר לידה – מה להביא וכל מה שקורה שם</p>
+          </div>
+          <div class="course-step">
+            <div class="step-number">5</div>
+            <p data-he="התאוששות לאחר לידה – מה תקין ומתי לפנות לעזרה" data-en="Postpartum recovery – what's normal and when to seek help">התאוששות לאחר לידה – מה תקין ומתי לפנות לעזרה</p>
+          </div>
+        </div>
+        <div class="course-note">
+          <span>💡</span>
+          <span data-he="הקורס מותאם אישית, מתקיים באווירה נעימה ותומכת" data-en="The course is personalized, held in a pleasant and supportive atmosphere">הקורס מותאם אישית, מתקיים באווירה נעימה ותומכת</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <img src="images/penina-photo.jpg" alt="פנינה שפלטר" class="about-image" loading="lazy">
+        <div class="about-content">
+          <h2 data-he="אודות" data-en="About">אודות</h2>
+          <h3 data-he="פנינה שפלטר - מיילדת מוסמכת ויועצת הנקה" data-en="Penina Spolter - Certified Midwife & Lactation Consultant">פנינה שפלטר - מיילדת מוסמכת ויועצת הנקה</h3>
+          <ul>
+            <li data-he="מיילדת מוסמכת עם מעל 10 שנות ניסיון בבתי חולים במחלקות נשים, הריון בסיכון וחדר לידה." data-en="Certified midwife with over 10 years of hospital experience in women's departments, high-risk pregnancy, and delivery rooms.">מיילדת מוסמכת עם מעל 10 שנות ניסיון בבתי חולים במחלקות נשים, הריון בסיכון וחדר לידה.</li>
+            <li data-he="יועצת הנקה מוסמכת (IBCLC) ובודקת טהרה מוסמכת מכון פועה." data-en="Certified lactation consultant (IBCLC) and certified tahara examiner from Puah Institute.">יועצת הנקה מוסמכת (IBCLC) ובודקת טהרה מוסמכת מכון פועה.</li>
+            <li data-he="דוברת עברית ואנגלית ברמת שפת אם." data-en="Native speaker of both Hebrew and English.">דוברת עברית ואנגלית ברמת שפת אם.</li>
+            <li data-he="מיילדת מקצועית, סבלנית וקשובה, עם רצון עמוק להעניק לכל אישה חוויית לידה חיובית, בטוחה ומעצימה." data-en="A professional, patient, and attentive midwife with a deep desire to give every woman a positive, safe, and empowering birth experience.">מיילדת מקצועית, סבלנית וקשובה, עם רצון עמוק להעניק לכל אישה חוויית לידה חיובית, בטוחה ומעצימה.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <h2 class="section-title" data-he="מה אומרות עלי" data-en="What They Say About Me">מה אומרות עלי</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-source">
+            <svg class="google-icon" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            <span>Google</span>
+          </div>
+          <div class="stars">
+            <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+          </div>
+          <blockquote data-he="&quot;לקחתי קורס הכנה ללידה עם פנינה, וזו הייתה אחת ההחלטות הכי טובות שעשיתי בהריון. היא ליוותה אותי במקצועיות, ברגישות ובסבלנות, ונתנה לי כלים מעשיים וגם הרבה ביטחון ושקט נפשי. הרגשתי שיש לי מישהי שמקשיבה באמת, עונה על כל שאלה ולא ממהרת לשום מקום. הלידה שלי היתה מהירה וידעתי בדיוק מה מצופה בכל שלב ושלב.&quot;" data-en="&quot;I took a birth preparation course with Penina, and it was one of the best decisions I made during my pregnancy. She accompanied me with professionalism, sensitivity, and patience, giving me practical tools and a lot of confidence and peace of mind.&quot;">"לקחתי קורס הכנה ללידה עם פנינה, וזו הייתה אחת ההחלטות הכי טובות שעשיתי בהריון. היא ליוותה אותי במקצועיות, ברגישות ובסבלנות, ונתנה לי כלים מעשיים וגם הרבה ביטחון ושקט נפשי. הרגשתי שיש לי מישהי שמקשיבה באמת, עונה על כל שאלה ולא ממהרת לשום מקום. הלידה שלי היתה מהירה וידעתי בדיוק מה מצופה בכל שלב ושלב."</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">א</div>
+            <span class="author-name" data-he="אלי פוביץ" data-en="Ali Fobitz">אלי פוביץ</span>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-source">
+            <svg class="google-icon" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            <span>Google</span>
+          </div>
+          <div class="stars">
+            <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+          </div>
+          <blockquote data-he="&quot;ממליצה מאד!!!! פנינה נחמדה מאד ומסבירה בסבלנות, המלצתי עליה לעוד 2 חברות שהלכו אליה ונהנו ממש. הגעתי מוכנה ללידה ולא היה חסר לי שום ידע אפילו שהייתה לי לידה מסובכת הייתי רגועה כי לא היו מושגים שלא ידעתי עליהם לפני, וידע הוא כח!&quot;" data-en="&quot;Highly recommend!!!! Penina is very kind and explains patiently. I recommended her to 2 friends who went to her and really enjoyed it. I arrived prepared for birth and didn't lack any knowledge. Even though I had a complicated birth, I was calm because there were no concepts I didn't know about beforehand.&quot;">"ממליצה מאד!!!! פנינה נחמדה מאד ומסבירה בסבלנות, המלצתי עליה לעוד 2 חברות שהלכו אליה ונהנו ממש. הגעתי מוכנה ללידה ולא היה חסר לי שום ידע אפילו שהייתה לי לידה מסובכת הייתי רגועה כי לא היו מושגים שלא ידעתי עליהם לפני, וידע הוא כח!"</blockquote>
+          <div class="testimonial-author">
+            <div class="author-avatar">ש</div>
+            <span class="author-name" data-he="שולמית גולדשטיין" data-en="Shulamit Goldstein">שולמית גולדשטיין</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2 data-he="צרי קשר" data-en="Contact">צרי קשר</h2>
+          <p data-he="מוזמנת לפנות אליי בכל שאלה או לקביעת פגישת ייעוץ" data-en="Feel free to reach out with any question or to schedule a consultation">מוזמנת לפנות אליי בכל שאלה או לקביעת פגישת ייעוץ</p>
+          <h4 class="contact-subtitle" data-he="דרכי התקשרות" data-en="Contact Methods">דרכי התקשרות</h4>
+          <div class="contact-links">
+            <a href="tel:058-761-1327" class="contact-link">
+              <div class="contact-link-icon phone">📞</div>
+              <div>
+                <div class="contact-link-label" data-he="טלפון" data-en="Phone">טלפון</div>
+                <div class="contact-link-value">058-761-1327</div>
+              </div>
+            </a>
+            <a href="mailto:ypspolter@gmail.com" class="contact-link">
+              <div class="contact-link-icon email">✉️</div>
+              <div>
+                <div class="contact-link-label" data-he="אימייל" data-en="Email">אימייל</div>
+                <div class="contact-link-value">ypspolter@gmail.com</div>
+              </div>
+            </a>
+            <a href="https://wa.me/972587611327" target="_blank" rel="noopener" class="contact-link">
+              <div class="contact-link-icon wa">💬</div>
+              <div>
+                <div class="contact-link-label" data-he="וואטסאפ" data-en="WhatsApp">וואטסאפ</div>
+                <div class="contact-link-value" data-he="לחצי כאן לשליחת הודעה" data-en="Click here to send a message">לחצי כאן לשליחת הודעה</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+            <input type="hidden" name="subject" value="פנייה חדשה מהאתר - peninaspolter.com">
+            <input type="hidden" name="redirect" value="https://peninaspolter.com#contact">
+            <input type="hidden" name="from_name" value="אתר פנינה שפלטר">
+            <div class="form-group">
+              <label data-he="שם מלא" data-en="Full Name">שם מלא <span class="required">*</span></label>
+              <input type="text" name="name" required>
+            </div>
+            <div class="form-group">
+              <label data-he="טלפון" data-en="Phone">טלפון <span class="required">*</span></label>
+              <input type="tel" name="phone" required>
+            </div>
+            <div class="form-group">
+              <label data-he="אימייל" data-en="Email">אימייל</label>
+              <input type="email" name="email">
+            </div>
+            <div class="form-group">
+              <label data-he="סוג שירות" data-en="Service Type">סוג שירות <span class="required">*</span></label>
+              <select name="service" required>
+                <option value="" data-he="בחרי שירות" data-en="Choose a service">בחרי שירות</option>
+                <option value="הכנה ללידה" data-he="הכנה ללידה" data-en="Birth Preparation">הכנה ללידה</option>
+                <option value="ייעוץ הנקה" data-he="ייעוץ הנקה" data-en="Lactation Consulting">ייעוץ הנקה</option>
+                <option value="בדיקת טהרה" data-he="בדיקת טהרה" data-en="Tahara Examination">בדיקת טהרה</option>
+                <option value="אחר" data-he="אחר" data-en="Other">אחר</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label data-he="הודעה" data-en="Message">הודעה</label>
+              <textarea name="message" rows="4"></textarea>
+            </div>
+            <button type="submit" class="submit-button">
+              <span data-he="שליחה" data-en="Send">שליחה</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </button>
+          </form>
+          <div class="form-success" id="formSuccess">
+            <h3>✓</h3>
+            <h3 data-he="ההודעה נשלחה בהצלחה!" data-en="Message sent successfully!">ההודעה נשלחה בהצלחה!</h3>
+            <p data-he="אחזור אלייך בהקדם" data-en="I'll get back to you soon">אחזור אלייך בהקדם</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#home" class="footer-logo">
+          <img src="images/logo.png" alt="לוגו">
+          <span>פנינה שפלטר</span>
+        </a>
+        <ul class="footer-links">
+          <li><a href="#home" data-he="בית" data-en="Home">בית</a></li>
+          <li><a href="#services" data-he="שירותים" data-en="Services">שירותים</a></li>
+          <li><a href="#about" data-he="אודות" data-en="About">אודות</a></li>
+          <li><a href="#testimonials" data-he="המלצות" data-en="Testimonials">המלצות</a></li>
+          <li><a href="#contact" data-he="צור קשר" data-en="Contact">צור קשר</a></li>
+        </ul>
+        <div class="footer-contact">
+          <a href="tel:058-761-1327">📞 058-761-1327</a>
+          <a href="mailto:ypspolter@gmail.com">✉️ ypspolter@gmail.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 פנינה שפלטר | מיילדת מוסמכת ויועצת הנקה IBCLC</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/972587611327?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%A4%D7%A0%D7%99%D7%A0%D7%94%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A7%D7%91%D7%9C%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A0%D7%95%D7%A1%D7%A4%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%94%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D%20%D7%A9%D7%9C%D7%9A" target="_blank" rel="noopener" class="whatsapp-float" aria-label="שלחי הודעה בוואטסאפ">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script>
+    // ===== Navbar scroll effect =====
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // ===== Mobile menu =====
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    function closeMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+    }
+
+    // ===== Language Toggle =====
+    let currentLang = 'he';
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'he' ? 'en' : 'he';
+      const html = document.documentElement;
+      html.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+      html.lang = currentLang;
+
+      document.getElementById('langHe').classList.toggle('active-lang', currentLang === 'he');
+      document.getElementById('langEn').classList.toggle('active-lang', currentLang === 'en');
+
+      // Update all translatable elements
+      document.querySelectorAll('[data-he][data-en]').forEach(el => {
+        const text = el.getAttribute(`data-${currentLang}`);
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+          el.placeholder = text;
+        } else if (el.tagName === 'OPTION') {
+          el.textContent = text;
+        } else if (el.children.length === 0 || el.querySelector('span:only-child')) {
+          el.textContent = text;
+        } else {
+          // For elements with children (like buttons with icons), update only text nodes
+          const span = el.querySelector('span[data-he]');
+          if (span) span.textContent = span.getAttribute(`data-${currentLang}`);
+          else {
+            // Update text content of the element itself
+            for (const node of el.childNodes) {
+              if (node.nodeType === Node.TEXT_NODE && node.textContent.trim()) {
+                node.textContent = text;
+                break;
+              }
+            }
+          }
+        }
+      });
+    }
+
+    // ===== Form handling =====
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('.submit-button');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<span>שולח...</span>';
+      btn.disabled = true;
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+        });
+
+        if (response.ok) {
+          form.style.display = 'none';
+          document.getElementById('formSuccess').classList.add('show');
+          form.reset();
+          setTimeout(() => {
+            form.style.display = 'flex';
+            document.getElementById('formSuccess').classList.remove('show');
+          }, 5000);
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (err) {
+        alert(currentLang === 'he' ? 'אירעה שגיאה. אנא נסי שוב או צרי קשר בוואטסאפ.' : 'An error occurred. Please try again or contact via WhatsApp.');
+      } finally {
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+      }
+    });
+
+    // ===== Smooth scroll for CTA =====
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
