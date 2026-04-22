@@ -870,10 +870,16 @@
 
     .mobile-menu a:hover { background: var(--primary-light); }
 
+    .mobile-lang-toggle {
+      margin: 12px auto 4px;
+      display: none;
+    }
+
     /* ===== Responsive ===== */
     @media (max-width: 968px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
+      .mobile-lang-toggle { display: inline-flex; }
 
       .hero-grid,
       .about-grid,
@@ -961,11 +967,16 @@
 
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#home" onclick="closeMenu()">בית</a>
-    <a href="#services" onclick="closeMenu()">שירותים</a>
-    <a href="#about" onclick="closeMenu()">אודות</a>
-    <a href="#testimonials" onclick="closeMenu()">המלצות</a>
-    <a href="#contact" onclick="closeMenu()">צור קשר</a>
+    <a href="#home" onclick="closeMenu()" data-he="בית" data-en="Home">בית</a>
+    <a href="#services" onclick="closeMenu()" data-he="שירותים" data-en="Services">שירותים</a>
+    <a href="#about" onclick="closeMenu()" data-he="אודות" data-en="About">אודות</a>
+    <a href="#testimonials" onclick="closeMenu()" data-he="המלצות" data-en="Testimonials">המלצות</a>
+    <a href="#contact" onclick="closeMenu()" data-he="צור קשר" data-en="Contact">צור קשר</a>
+    <button class="lang-toggle mobile-lang-toggle" onclick="toggleLanguage(); closeMenu();">
+      <span id="mobileLangHe" class="active-lang">עב</span>
+      <span>|</span>
+      <span id="mobileLangEn">EN</span>
+    </button>
   </div>
 
   <!-- Hero Section -->
@@ -1244,6 +1255,8 @@
 
       document.getElementById('langHe').classList.toggle('active-lang', currentLang === 'he');
       document.getElementById('langEn').classList.toggle('active-lang', currentLang === 'en');
+      document.getElementById('mobileLangHe').classList.toggle('active-lang', currentLang === 'he');
+      document.getElementById('mobileLangEn').classList.toggle('active-lang', currentLang === 'en');
 
       // Update all translatable elements
       document.querySelectorAll('[data-he][data-en]').forEach(el => {
