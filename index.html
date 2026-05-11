@@ -97,7 +97,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 72px;
+      height: 92px;
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 24px;
@@ -106,16 +106,17 @@
     .nav-logo {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 14px;
       text-decoration: none;
       color: var(--primary);
       font-family: var(--font-heading);
-      font-size: 1.5rem;
-      font-weight: 600;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
     }
 
     .nav-logo img {
-      width: 40px;
+      width: 60px;
       height: auto;
     }
 
@@ -178,7 +179,7 @@
     .hero {
       display: flex;
       align-items: center;
-      padding-top: 100px;
+      padding-top: 120px;
       padding-bottom: 60px;
       background: linear-gradient(rgba(250, 249, 246, 0.5), var(--background));
     }
@@ -232,75 +233,14 @@
       text-align: right;
     }
 
-    .hero-content h1 {
+    .hero-tagline {
       font-family: var(--font-heading);
-      font-size: 3.5rem;
-      font-weight: 700;
-      color: var(--primary);
-      line-height: 1.2;
-      margin-bottom: 8px;
-    }
-
-    .hero-content h2 {
-      font-family: var(--font-heading);
-      font-size: 2rem;
+      font-size: 2.6rem;
       font-weight: 600;
       color: var(--primary);
-      margin-bottom: 20px;
+      line-height: 1.3;
+      margin: 0;
     }
-
-    .hero-content p {
-      font-size: 1.1rem;
-      color: var(--text-medium);
-      line-height: 1.8;
-      margin-bottom: 32px;
-    }
-
-    .cta-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      background: var(--accent);
-      color: #5c3d1e;
-      border: none;
-      padding: 18px 48px;
-      border-radius: var(--radius-lg);
-      font-size: 1.2rem;
-      font-weight: 500;
-      font-family: var(--font-body);
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.3s;
-      box-shadow: var(--shadow-md);
-      width: 100%;
-    }
-
-    .cta-button:hover {
-      background: var(--accent-dark);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .cta-button svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    .kupot-note {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 16px;
-      padding: 14px 24px;
-      background: rgba(92, 107, 56, 0.08);
-      border-radius: var(--radius-md);
-      color: var(--primary);
-      font-size: 0.95rem;
-    }
-
-    .kupot-note svg { width: 20px; height: 20px; flex-shrink: 0; }
 
     /* ===== Services Section ===== */
     .services {
@@ -421,6 +361,23 @@
       color: var(--primary);
       font-size: 0.95rem;
     }
+
+    .kupot-band {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 32px;
+      padding: 16px 24px;
+      background: rgba(92, 107, 56, 0.08);
+      border-radius: var(--radius-md);
+      color: var(--primary);
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .kupot-band svg { width: 22px; height: 22px; flex-shrink: 0; }
 
     /* ===== About Section ===== */
     .about {
@@ -934,7 +891,7 @@
     .mobile-menu {
       display: none;
       position: fixed;
-      top: 72px;
+      top: 92px;
       right: 0;
       left: 0;
       background: var(--background-warm);
@@ -978,8 +935,7 @@
       }
 
       .hero-content { text-align: center; }
-      .hero-content h1 { font-size: 2.5rem; }
-      .hero-content h2 { font-size: 1.5rem; }
+      .hero-tagline { font-size: 2rem; }
 
       .hero-image-wrapper {
         max-width: 350px;
@@ -1006,14 +962,12 @@
       }
 
       .section-title { font-size: 2rem; }
-
-      .kupot-note { font-size: 0.85rem; }
     }
 
     @media (max-width: 480px) {
-      .hero-content h1 { font-size: 2rem; }
-      .hero-content h2 { font-size: 1.3rem; }
-      .cta-button { padding: 16px 32px; font-size: 1.05rem; }
+      .hero-tagline { font-size: 1.6rem; }
+      .nav-logo { font-size: 1.5rem; }
+      .nav-logo img { width: 48px; }
       .footer-inner { flex-direction: column; text-align: center; }
       .footer-links { flex-wrap: wrap; justify-content: center; }
       .footer-contact { flex-direction: column; align-items: center; }
@@ -1079,17 +1033,7 @@
           <img src="images/penina-photo.jpg" alt="פנינה שפלטר - מיילדת מוסמכת" class="hero-image" loading="eager">
         </div>
         <div class="hero-content">
-          <h1 data-he="ליווי מקצועי, רגיש ובטוח" data-en="Professional, Sensitive & Safe Care">ליווי מקצועי, רגיש ובטוח</h1>
-          <h2 data-he="מההיריון ועד להנקה" data-en="From Pregnancy to Breastfeeding">מההיריון ועד להנקה</h2>
-          <p data-he="מיילדת מוסמכת עם מעל 10 שנות ניסיון בחדרי לידה, יועצת הנקה מוסמכת (IBCLC) ובודקת טהרה מוסמכת." data-en="Certified midwife with over 10 years of experience in delivery rooms, certified lactation consultant (IBCLC), and certified tahara examiner.">מיילדת מוסמכת עם מעל 10 שנות ניסיון בחדרי לידה, יועצת הנקה מוסמכת (IBCLC) ובודקת טהרה מוסמכת.</p>
-          <a href="#contact" class="cta-button" data-he="קבעי שיחת ייעוץ" data-en="Book a Consultation">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
-            <span>קבעי שיחת ייעוץ</span>
-          </a>
-          <div class="kupot-note">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            <span data-he="✓ ניתן לקבל החזר מקופות החולים" data-en="✓ Health insurance reimbursement available">✓ ניתן לקבל החזר מקופות החולים</span>
-          </div>
+          <p class="hero-tagline" data-he="מיילדת מוסמכת ומנוסה עם מעל 10 שנות ניסיון במערך המיילדותי בבתי חולים ובקהילה." data-en="Certified and experienced midwife with over 10 years of experience in the obstetric system, in hospitals and in the community.">מיילדת מוסמכת ומנוסה עם מעל 10 שנות ניסיון במערך המיילדותי בבתי חולים ובקהילה.</p>
         </div>
       </div>
     </div>
@@ -1105,12 +1049,12 @@
         <div class="service-card">
           <div class="service-icon birth">🤰</div>
           <h3 data-he="הכנה ללידה" data-en="Birth Preparation">הכנה ללידה</h3>
-          <p data-he="קורסים אישיים או קבוצתיים: לידה ראשונה, לידה חוזרת, וקיסרי מתוכנן. ידע מעשי וכלים להתמודדות עם כאב." data-en="Individual or group courses: first birth, repeat birth, and planned cesarean. Practical knowledge and pain management tools.">קורסים אישיים או קבוצתיים: לידה ראשונה, לידה חוזרת, וקיסרי מתוכנן. ידע מעשי וכלים להתמודדות עם כאב.</p>
+          <p data-he="קורסים אישיים-זוגיים: לידה ראשונה, לידה חוזרת, הכנה לניתוח קיסרי אלקטיבי והכנה להנקה. כל מה שצריך לדעת על לפני, תוך כדי ואחרי לידה." data-en="Personal & couples courses: first birth, repeat birth, preparation for elective cesarean, and breastfeeding preparation. Everything you need to know about before, during, and after birth.">קורסים אישיים-זוגיים: לידה ראשונה, לידה חוזרת, הכנה לניתוח קיסרי אלקטיבי והכנה להנקה. כל מה שצריך לדעת על לפני, תוך כדי ואחרי לידה.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon lactation">🤱</div>
-          <h3 data-he="ייעוץ הנקה" data-en="Lactation Consulting">ייעוץ הנקה</h3>
-          <p data-he="פתרון אתגרים בזמן אמת: הצמדה נכונה, הגברת חלב, חזרה לעבודה וליווי אישי מותאם לאם ולתינוק." data-en="Real-time problem solving: proper latch, increasing milk supply, return to work, and personalized support for mother and baby.">פתרון אתגרים בזמן אמת: הצמדה נכונה, הגברת חלב, חזרה לעבודה וליווי אישי מותאם לאם ולתינוק.</p>
+          <div class="service-icon lactation">🩺</div>
+          <h3 data-he="בדיקות לפני לידה" data-en="Prenatal Examinations">בדיקות לפני לידה</h3>
+          <p data-he="בדיקות פתיחה לפני נסיעה לחדר לידה." data-en="Dilation checks before heading to the delivery room.">בדיקות פתיחה לפני נסיעה לחדר לידה.</p>
         </div>
         <div class="service-card">
           <div class="service-icon tahara">🔍</div>
@@ -1130,15 +1074,15 @@
           </div>
           <div class="course-step">
             <div class="step-number">2</div>
-            <p data-he="שיטות להתמודדות עם כאב – נשימה, תנועה, ותמיכה רגשית" data-en="Pain management methods – breathing, movement, and emotional support">שיטות להתמודדות עם כאב – נשימה, תנועה, ותמיכה רגשית</p>
+            <p data-he="שיטות להתמודדות עם כאב – כל מה שצריך לדעת על שיטות טבעיות ולא טבעיות" data-en="Pain management methods – everything you need to know about natural and non-natural methods">שיטות להתמודדות עם כאב – כל מה שצריך לדעת על שיטות טבעיות ולא טבעיות</p>
           </div>
           <div class="course-step">
             <div class="step-number">3</div>
-            <p data-he="תפקיד בן/בת הזוג – איך להפוך למלווה פעיל ותומך" data-en="Partner's role – how to become an active and supportive companion">תפקיד בן/בת הזוג – איך להפוך למלווה פעיל ותומך</p>
+            <p data-he="תפקיד הבעל/מלווה – איך להפוך למלווה פעיל/ה ותומך/ת" data-en="Role of the husband/companion – how to become an active and supportive companion">תפקיד הבעל/מלווה – איך להפוך למלווה פעיל/ה ותומך/ת</p>
           </div>
           <div class="course-step">
             <div class="step-number">4</div>
-            <p data-he="חדר לידה – מה להביא וכל מה שקורה שם" data-en="Delivery room – what to bring and everything that happens there">חדר לידה – מה להביא וכל מה שקורה שם</p>
+            <p data-he="חדר לידה – מה להביא מהבית ולהבין כל מה שקורה מסביבך" data-en="Delivery room – what to bring from home and understanding everything happening around you">חדר לידה – מה להביא מהבית ולהבין כל מה שקורה מסביבך</p>
           </div>
           <div class="course-step">
             <div class="step-number">5</div>
@@ -1147,8 +1091,13 @@
         </div>
         <div class="course-note">
           <span>💡</span>
-          <span data-he="הקורס מותאם אישית, מתקיים באווירה נעימה ותומכת" data-en="The course is personalized, held in a pleasant and supportive atmosphere">הקורס מותאם אישית, מתקיים באווירה נעימה ותומכת</span>
+          <span data-he="הקורס מותאם אישית, מתקיים באווירה נעימה ותומכת בקליניקה פרטית ברמת בית שמש" data-en="The course is personalized, held in a pleasant and supportive atmosphere in a private clinic in Ramat Beit Shemesh">הקורס מותאם אישית, מתקיים באווירה נעימה ותומכת בקליניקה פרטית ברמת בית שמש</span>
         </div>
+      </div>
+
+      <div class="kupot-band">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <span data-he="ניתן לקבל החזר מקופות החולים" data-en="Reimbursement available from health insurance funds">ניתן לקבל החזר מקופות החולים</span>
       </div>
     </div>
   </section>
@@ -1160,12 +1109,12 @@
         <img src="images/penina-photo.jpg" alt="פנינה שפלטר" class="about-image" loading="lazy">
         <div class="about-content">
           <h2 data-he="אודות" data-en="About">אודות</h2>
-          <h3 data-he="פנינה שפלטר - מיילדת מוסמכת ויועצת הנקה" data-en="Penina Spolter - Certified Midwife & Lactation Consultant">פנינה שפלטר - מיילדת מוסמכת ויועצת הנקה</h3>
+          <h3 data-he="פנינה שפלטר - אחות נשים, מיילדת מנוסה, יועצת הנקה, בודקת טהרה" data-en="Penina Spolter - Women's Nurse, Experienced Midwife, Lactation Consultant, Tahara Examiner">פנינה שפלטר - אחות נשים, מיילדת מנוסה, יועצת הנקה, בודקת טהרה</h3>
           <ul>
             <li data-he="מיילדת מוסמכת עם מעל 10 שנות ניסיון בבתי חולים במחלקות נשים, הריון בסיכון וחדר לידה." data-en="Certified midwife with over 10 years of hospital experience in women's departments, high-risk pregnancy, and delivery rooms.">מיילדת מוסמכת עם מעל 10 שנות ניסיון בבתי חולים במחלקות נשים, הריון בסיכון וחדר לידה.</li>
-            <li data-he="יועצת הנקה מוסמכת (IBCLC) ובודקת טהרה מוסמכת מכון פועה." data-en="Certified lactation consultant (IBCLC) and certified tahara examiner from Puah Institute.">יועצת הנקה מוסמכת (IBCLC) ובודקת טהרה מוסמכת מכון פועה.</li>
+            <li data-he="יועצת הנקה מוסמכת משרד הבריאות ובודקת טהרה מוסמכת." data-en="Lactation consultant certified by the Ministry of Health, and certified tahara examiner.">יועצת הנקה מוסמכת משרד הבריאות ובודקת טהרה מוסמכת.</li>
             <li data-he="דוברת עברית ואנגלית ברמת שפת אם." data-en="Native speaker of both Hebrew and English.">דוברת עברית ואנגלית ברמת שפת אם.</li>
-            <li data-he="מיילדת מקצועית, סבלנית וקשובה, עם רצון עמוק להעניק לכל אישה חוויית לידה חיובית, בטוחה ומעצימה." data-en="A professional, patient, and attentive midwife with a deep desire to give every woman a positive, safe, and empowering birth experience.">מיילדת מקצועית, סבלנית וקשובה, עם רצון עמוק להעניק לכל אישה חוויית לידה חיובית, בטוחה ומעצימה.</li>
+            <li data-he="מיילדת מקצועית, סבלנית וקשובה, עם רצון עמוק להעניק לכל אישה ידע רחב שתהיה לה חוויית לידה חיובית, בטוחה ומעצימה." data-en="A professional, patient, and attentive midwife with a deep desire to give every woman the broad knowledge she needs for a positive, safe, and empowering birth experience.">מיילדת מקצועית, סבלנית וקשובה, עם רצון עמוק להעניק לכל אישה ידע רחב שתהיה לה חוויית לידה חיובית, בטוחה ומעצימה.</li>
           </ul>
         </div>
       </div>
