@@ -417,6 +417,26 @@
       aspect-ratio: 3/3.5;
     }
 
+    .about-gallery {
+      display: grid;
+      grid-template-columns: 3fr 4fr;
+      gap: 24px;
+      margin-top: 56px;
+      align-items: stretch;
+    }
+
+    .about-gallery-img {
+      width: 100%;
+      height: 100%;
+      border-radius: var(--radius-lg);
+      object-fit: cover;
+      box-shadow: var(--shadow-sm);
+      display: block;
+    }
+
+    .about-gallery-img.portrait { aspect-ratio: 3/4; }
+    .about-gallery-img.landscape { aspect-ratio: 4/3; }
+
     .about-content h2 {
       font-family: var(--font-heading);
       font-size: 2.5rem;
@@ -978,6 +998,14 @@
         margin: 0 auto;
       }
 
+      .about-gallery {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 40px;
+      }
+
+      .about-gallery-img { max-width: 400px; margin: 0 auto; }
+
       .section-title { font-size: 2rem; }
     }
 
@@ -1144,6 +1172,11 @@
             <li data-he="מיילדת מקצועית, סבלנית וקשובה, עם רצון עמוק להעניק לכל אישה ידע רחב שתהיה לה חוויית לידה חיובית, בטוחה ומעצימה." data-en="A professional, patient, and attentive midwife with a deep desire to give every woman the broad knowledge she needs for a positive, safe, and empowering birth experience.">מיילדת מקצועית, סבלנית וקשובה, עם רצון עמוק להעניק לכל אישה ידע רחב שתהיה לה חוויית לידה חיובית, בטוחה ומעצימה.</li>
           </ul>
         </div>
+      </div>
+
+      <div class="about-gallery">
+        <img src="images/penina-about-1.jpg" alt="פנינה שפלטר עם משפחה ויילוד" class="about-gallery-img portrait" loading="lazy">
+        <img src="images/penina-about-2.jpg" alt="פנינה שפלטר מעבירה קורס הכנה ללידה" class="about-gallery-img landscape" loading="lazy">
       </div>
     </div>
   </section>
