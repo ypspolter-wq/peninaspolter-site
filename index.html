@@ -13,7 +13,7 @@
   <link rel="icon" type="image/png" href="images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Rubik:wght@300;400;500;600&family=Varela+Round&display=swap" rel="stylesheet">
   <style>
     /* ===== CSS Reset & Variables ===== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -39,7 +39,7 @@
       --radius-sm: 12px;
       --radius-md: 16px;
       --radius-lg: 24px;
-      --font-heading: 'Cormorant Garamond', Georgia, serif;
+      --font-heading: 'Frank Ruhl Libre', Georgia, 'Rubik', serif;
       --font-body: 'Rubik', system-ui, sans-serif;
     }
 
@@ -75,6 +75,21 @@
       margin-bottom: 2.5rem;
     }
 
+    /* ===== בס"ד tag ===== */
+    .bsd {
+      position: fixed;
+      top: 6px;
+      right: 14px;
+      z-index: 101;
+      font-family: var(--font-heading);
+      font-size: 0.78rem;
+      color: var(--text-light);
+      font-weight: 500;
+      letter-spacing: 0.3px;
+      pointer-events: none;
+      user-select: none;
+    }
+
     /* ===== Navigation ===== */
     .navbar {
       position: fixed;
@@ -97,7 +112,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 72px;
+      height: 108px;
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 24px;
@@ -106,16 +121,17 @@
     .nav-logo {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 14px;
       text-decoration: none;
       color: var(--primary);
       font-family: var(--font-heading);
-      font-size: 1.5rem;
-      font-weight: 600;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
     }
 
     .nav-logo img {
-      width: 40px;
+      width: 84px;
       height: auto;
     }
 
@@ -178,7 +194,7 @@
     .hero {
       display: flex;
       align-items: center;
-      padding-top: 100px;
+      padding-top: 140px;
       padding-bottom: 60px;
       background: linear-gradient(rgba(250, 249, 246, 0.5), var(--background));
     }
@@ -225,82 +241,23 @@
       max-width: 480px;
       border-radius: var(--radius-lg);
       object-fit: cover;
-      aspect-ratio: 3/3.5;
+      object-position: center top;
+      aspect-ratio: 3/4;
     }
 
     .hero-content {
       text-align: right;
     }
 
-    .hero-content h1 {
-      font-family: var(--font-heading);
-      font-size: 3.5rem;
-      font-weight: 700;
+    .hero-tagline {
+      font-family: 'Varela Round', 'Rubik', system-ui, sans-serif;
+      font-size: 2.3rem;
+      font-weight: 400;
       color: var(--primary);
-      line-height: 1.2;
-      margin-bottom: 8px;
+      line-height: 1.45;
+      letter-spacing: 0.2px;
+      margin: 0;
     }
-
-    .hero-content h2 {
-      font-family: var(--font-heading);
-      font-size: 2rem;
-      font-weight: 600;
-      color: var(--primary);
-      margin-bottom: 20px;
-    }
-
-    .hero-content p {
-      font-size: 1.1rem;
-      color: var(--text-medium);
-      line-height: 1.8;
-      margin-bottom: 32px;
-    }
-
-    .cta-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      background: var(--accent);
-      color: #5c3d1e;
-      border: none;
-      padding: 18px 48px;
-      border-radius: var(--radius-lg);
-      font-size: 1.2rem;
-      font-weight: 500;
-      font-family: var(--font-body);
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.3s;
-      box-shadow: var(--shadow-md);
-      width: 100%;
-    }
-
-    .cta-button:hover {
-      background: var(--accent-dark);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-lg);
-    }
-
-    .cta-button svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    .kupot-note {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 16px;
-      padding: 14px 24px;
-      background: rgba(92, 107, 56, 0.08);
-      border-radius: var(--radius-md);
-      color: var(--primary);
-      font-size: 0.95rem;
-    }
-
-    .kupot-note svg { width: 20px; height: 20px; flex-shrink: 0; }
 
     /* ===== Services Section ===== */
     .services {
@@ -396,16 +353,19 @@
 
     .step-number {
       flex-shrink: 0;
-      width: 36px;
-      height: 36px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       background: var(--primary-light);
       color: var(--primary);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-weight: 600;
-      font-size: 0.95rem;
+    }
+
+    .step-number svg {
+      width: 24px;
+      height: 24px;
     }
 
     .course-step p {
@@ -420,6 +380,50 @@
       margin-top: 24px;
       color: var(--primary);
       font-size: 0.95rem;
+    }
+
+    .kupot-band {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 32px;
+      padding: 22px 24px;
+      background: rgba(92, 107, 56, 0.08);
+      border-radius: var(--radius-md);
+      color: var(--primary);
+      font-size: 1rem;
+      font-weight: 500;
+      text-align: center;
+    }
+
+    .kupot-text {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .kupot-text svg { width: 22px; height: 22px; flex-shrink: 0; }
+
+    .kupot-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 28px;
+    }
+
+    .kupot-logos img {
+      height: 56px;
+      width: auto;
+      max-width: 140px;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+
+    @media (max-width: 600px) {
+      .kupot-logos { gap: 18px; }
+      .kupot-logos img { height: 40px; max-width: 90px; }
     }
 
     /* ===== About Section ===== */
@@ -442,6 +446,27 @@
       object-fit: cover;
       aspect-ratio: 3/3.5;
     }
+
+    .about-gallery {
+      display: grid;
+      grid-template-columns: 3fr 4fr;
+      gap: 20px;
+      margin: 56px auto 0;
+      max-width: 640px;
+      align-items: stretch;
+    }
+
+    .about-gallery-img {
+      width: 100%;
+      height: 100%;
+      border-radius: var(--radius-md);
+      object-fit: cover;
+      box-shadow: var(--shadow-sm);
+      display: block;
+    }
+
+    .about-gallery-img.portrait { aspect-ratio: 3/4; }
+    .about-gallery-img.landscape { aspect-ratio: 4/3; }
 
     .about-content h2 {
       font-family: var(--font-heading);
@@ -934,7 +959,7 @@
     .mobile-menu {
       display: none;
       position: fixed;
-      top: 72px;
+      top: 108px;
       right: 0;
       left: 0;
       background: var(--background-warm);
@@ -978,8 +1003,7 @@
       }
 
       .hero-content { text-align: center; }
-      .hero-content h1 { font-size: 2.5rem; }
-      .hero-content h2 { font-size: 1.5rem; }
+      .hero-tagline { font-size: 2rem; }
 
       .hero-image-wrapper {
         max-width: 350px;
@@ -1005,15 +1029,25 @@
         margin: 0 auto;
       }
 
-      .section-title { font-size: 2rem; }
+      .about-gallery {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 40px;
+        max-width: 320px;
+      }
 
-      .kupot-note { font-size: 0.85rem; }
+      .about-gallery-img { max-width: 100%; margin: 0 auto; }
+
+      .section-title { font-size: 2rem; }
     }
 
     @media (max-width: 480px) {
-      .hero-content h1 { font-size: 2rem; }
-      .hero-content h2 { font-size: 1.3rem; }
-      .cta-button { padding: 16px 32px; font-size: 1.05rem; }
+      .nav-inner { height: 84px; }
+      .mobile-menu { top: 84px; }
+      .hero { padding-top: 120px; }
+      .hero-tagline { font-size: 1.5rem; }
+      .nav-logo { font-size: 1.4rem; gap: 10px; }
+      .nav-logo img { width: 52px; }
       .footer-inner { flex-direction: column; text-align: center; }
       .footer-links { flex-wrap: wrap; justify-content: center; }
       .footer-contact { flex-direction: column; align-items: center; }
@@ -1030,6 +1064,8 @@
 </head>
 <body>
 
+  <div class="bsd" aria-hidden="true">בס"ד</div>
+
   <!-- Navigation -->
   <nav class="navbar" id="navbar">
     <div class="nav-inner">
@@ -1038,11 +1074,11 @@
         <img src="images/logo.png" alt="לוגו פנינה שפלטר">
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home">בית</a></li>
-        <li><a href="#services">שירותים</a></li>
-        <li><a href="#about">אודות</a></li>
-        <li><a href="#testimonials">המלצות</a></li>
-        <li><a href="#contact">צור קשר</a></li>
+        <li><a href="#home" data-he="בית" data-en="Home">בית</a></li>
+        <li><a href="#services" data-he="שירותים" data-en="Services">שירותים</a></li>
+        <li><a href="#about" data-he="אודות" data-en="About">אודות</a></li>
+        <li><a href="#testimonials" data-he="המלצות" data-en="Testimonials">המלצות</a></li>
+        <li><a href="#contact" data-he="צור קשר" data-en="Contact">צור קשר</a></li>
         <li>
           <button class="lang-toggle" onclick="toggleLanguage()">
             <span id="langHe" class="active-lang">עב</span>
@@ -1076,20 +1112,10 @@
     <div class="container">
       <div class="hero-grid">
         <div class="hero-image-wrapper">
-          <img src="images/penina-photo.jpg" alt="פנינה שפלטר - מיילדת מוסמכת" class="hero-image" loading="eager">
+          <img src="images/penina-hero.jpg" alt="פנינה שפלטר - מיילדת מוסמכת" class="hero-image" loading="eager">
         </div>
         <div class="hero-content">
-          <h1 data-he="ליווי מקצועי, רגיש ובטוח" data-en="Professional, Sensitive & Safe Care">ליווי מקצועי, רגיש ובטוח</h1>
-          <h2 data-he="מההיריון ועד להנקה" data-en="From Pregnancy to Breastfeeding">מההיריון ועד להנקה</h2>
-          <p data-he="מיילדת מוסמכת עם מעל 10 שנות ניסיון בחדרי לידה, יועצת הנקה מוסמכת (IBCLC) ובודקת טהרה מוסמכת." data-en="Certified midwife with over 10 years of experience in delivery rooms, certified lactation consultant (IBCLC), and certified tahara examiner.">מיילדת מוסמכת עם מעל 10 שנות ניסיון בחדרי לידה, יועצת הנקה מוסמכת (IBCLC) ובודקת טהרה מוסמכת.</p>
-          <a href="#contact" class="cta-button" data-he="קבעי שיחת ייעוץ" data-en="Book a Consultation">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
-            <span>קבעי שיחת ייעוץ</span>
-          </a>
-          <div class="kupot-note">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            <span data-he="✓ ניתן לקבל החזר מקופות החולים" data-en="✓ Health insurance reimbursement available">✓ ניתן לקבל החזר מקופות החולים</span>
-          </div>
+          <p class="hero-tagline" data-he="מיילדת מוסמכת ומנוסה עם מעל 10 שנות ניסיון במערך המיילדותי בבתי חולים ובקהילה." data-en="Certified and experienced midwife with over 10 years of experience in the obstetric system, in hospitals and in the community.">מיילדת מוסמכת ומנוסה עם מעל 10 שנות ניסיון במערך המיילדותי בבתי חולים ובקהילה.</p>
         </div>
       </div>
     </div>
@@ -1105,12 +1131,12 @@
         <div class="service-card">
           <div class="service-icon birth">🤰</div>
           <h3 data-he="הכנה ללידה" data-en="Birth Preparation">הכנה ללידה</h3>
-          <p data-he="קורסים אישיים או קבוצתיים: לידה ראשונה, לידה חוזרת, וקיסרי מתוכנן. ידע מעשי וכלים להתמודדות עם כאב." data-en="Individual or group courses: first birth, repeat birth, and planned cesarean. Practical knowledge and pain management tools.">קורסים אישיים או קבוצתיים: לידה ראשונה, לידה חוזרת, וקיסרי מתוכנן. ידע מעשי וכלים להתמודדות עם כאב.</p>
+          <p data-he="קורסים אישיים-זוגיים: לידה ראשונה, לידה חוזרת, הכנה לניתוח קיסרי אלקטיבי והכנה להנקה. כל מה שצריך לדעת על לפני, תוך כדי ואחרי לידה." data-en="Personal & couples courses: first birth, repeat birth, preparation for elective cesarean, and breastfeeding preparation. Everything you need to know about before, during, and after birth.">קורסים אישיים-זוגיים: לידה ראשונה, לידה חוזרת, הכנה לניתוח קיסרי אלקטיבי והכנה להנקה. כל מה שצריך לדעת על לפני, תוך כדי ואחרי לידה.</p>
         </div>
         <div class="service-card">
-          <div class="service-icon lactation">🤱</div>
-          <h3 data-he="ייעוץ הנקה" data-en="Lactation Consulting">ייעוץ הנקה</h3>
-          <p data-he="פתרון אתגרים בזמן אמת: הצמדה נכונה, הגברת חלב, חזרה לעבודה וליווי אישי מותאם לאם ולתינוק." data-en="Real-time problem solving: proper latch, increasing milk supply, return to work, and personalized support for mother and baby.">פתרון אתגרים בזמן אמת: הצמדה נכונה, הגברת חלב, חזרה לעבודה וליווי אישי מותאם לאם ולתינוק.</p>
+          <div class="service-icon lactation">🩺</div>
+          <h3 data-he="בדיקות לפני לידה" data-en="Prenatal Examinations">בדיקות לפני לידה</h3>
+          <p data-he="בדיקות פתיחה לפני נסיעה לחדר לידה." data-en="Dilation checks before heading to the delivery room.">בדיקות פתיחה לפני נסיעה לחדר לידה.</p>
         </div>
         <div class="service-card">
           <div class="service-icon tahara">🔍</div>
@@ -1125,29 +1151,46 @@
         <p data-he="קורס בן מספר מפגשים לזוגות באופן פרטני, המעניק לכם ידע, כלים וביטחון לקראת הלידה." data-en="A multi-session private course for couples, providing knowledge, tools, and confidence for the birth.">קורס בן מספר מפגשים לזוגות באופן פרטני, המעניק לכם ידע, כלים וביטחון לקראת הלידה.</p>
         <div class="course-steps">
           <div class="course-step">
-            <div class="step-number">1</div>
+            <div class="step-number" aria-label="שלב 1"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><ellipse cx="16" cy="21" rx="7.5" ry="9"/><circle cx="7" cy="11" r="2.4"/><circle cx="12" cy="7.5" r="2.6"/><circle cx="17.5" cy="6.5" r="2.4"/><circle cx="22" cy="8.5" r="2.1"/><circle cx="25" cy="12.5" r="1.7"/></svg></div>
             <p data-he="שלבי הלידה – איך לזהותם ומה קורה בכל שלב" data-en="Stages of labor – how to identify them and what happens at each stage">שלבי הלידה – איך לזהותם ומה קורה בכל שלב</p>
           </div>
           <div class="course-step">
-            <div class="step-number">2</div>
-            <p data-he="שיטות להתמודדות עם כאב – נשימה, תנועה, ותמיכה רגשית" data-en="Pain management methods – breathing, movement, and emotional support">שיטות להתמודדות עם כאב – נשימה, תנועה, ותמיכה רגשית</p>
+            <div class="step-number" aria-label="שלב 2"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><ellipse cx="16" cy="21" rx="7.5" ry="9"/><circle cx="7" cy="11" r="2.4"/><circle cx="12" cy="7.5" r="2.6"/><circle cx="17.5" cy="6.5" r="2.4"/><circle cx="22" cy="8.5" r="2.1"/><circle cx="25" cy="12.5" r="1.7"/></svg></div>
+            <p data-he="התמודדות עם כאב – להבין, לבחור ולהתמודד: שיטות טבעיות ולא טבעיות" data-en="Coping with pain – understand, choose, and manage: natural and non-natural methods">התמודדות עם כאב – להבין, לבחור ולהתמודד: שיטות טבעיות ולא טבעיות</p>
           </div>
           <div class="course-step">
-            <div class="step-number">3</div>
-            <p data-he="תפקיד בן/בת הזוג – איך להפוך למלווה פעיל ותומך" data-en="Partner's role – how to become an active and supportive companion">תפקיד בן/בת הזוג – איך להפוך למלווה פעיל ותומך</p>
+            <div class="step-number" aria-label="שלב 3"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><ellipse cx="16" cy="21" rx="7.5" ry="9"/><circle cx="7" cy="11" r="2.4"/><circle cx="12" cy="7.5" r="2.6"/><circle cx="17.5" cy="6.5" r="2.4"/><circle cx="22" cy="8.5" r="2.1"/><circle cx="25" cy="12.5" r="1.7"/></svg></div>
+            <p data-he="תפקיד הבעל/מלווה – להיות חלק משמעותי ותומך בלידה" data-en="Role of the husband/companion – being a meaningful, supportive part of the birth">תפקיד הבעל/מלווה – להיות חלק משמעותי ותומך בלידה</p>
           </div>
           <div class="course-step">
-            <div class="step-number">4</div>
-            <p data-he="חדר לידה – מה להביא וכל מה שקורה שם" data-en="Delivery room – what to bring and everything that happens there">חדר לידה – מה להביא וכל מה שקורה שם</p>
+            <div class="step-number" aria-label="שלב 4"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><ellipse cx="16" cy="21" rx="7.5" ry="9"/><circle cx="7" cy="11" r="2.4"/><circle cx="12" cy="7.5" r="2.6"/><circle cx="17.5" cy="6.5" r="2.4"/><circle cx="22" cy="8.5" r="2.1"/><circle cx="25" cy="12.5" r="1.7"/></svg></div>
+            <p data-he="חדר לידה – מה לארוז בתיק לידה ואיך להבין את כל מה שנאמר ומתרחש סביבך" data-en="Delivery room – what to pack in your birth bag and how to understand everything said and happening around you">חדר לידה – מה לארוז בתיק לידה ואיך להבין את כל מה שנאמר ומתרחש סביבך</p>
           </div>
           <div class="course-step">
-            <div class="step-number">5</div>
+            <div class="step-number" aria-label="שלב 5"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><ellipse cx="16" cy="21" rx="7.5" ry="9"/><circle cx="7" cy="11" r="2.4"/><circle cx="12" cy="7.5" r="2.6"/><circle cx="17.5" cy="6.5" r="2.4"/><circle cx="22" cy="8.5" r="2.1"/><circle cx="25" cy="12.5" r="1.7"/></svg></div>
             <p data-he="התאוששות לאחר לידה – מה תקין ומתי לפנות לעזרה" data-en="Postpartum recovery – what's normal and when to seek help">התאוששות לאחר לידה – מה תקין ומתי לפנות לעזרה</p>
+          </div>
+          <div class="course-step">
+            <div class="step-number" aria-label="שלב 6"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><ellipse cx="16" cy="21" rx="7.5" ry="9"/><circle cx="7" cy="11" r="2.4"/><circle cx="12" cy="7.5" r="2.6"/><circle cx="17.5" cy="6.5" r="2.4"/><circle cx="22" cy="8.5" r="2.1"/><circle cx="25" cy="12.5" r="1.7"/></svg></div>
+            <p data-he="הכנה להנקה – להתחיל נכון עם ביטחון וידע" data-en="Breastfeeding preparation – starting off right with confidence and knowledge">הכנה להנקה – להתחיל נכון עם ביטחון וידע</p>
           </div>
         </div>
         <div class="course-note">
           <span>💡</span>
-          <span data-he="הקורס מותאם אישית, מתקיים באווירה נעימה ותומכת" data-en="The course is personalized, held in a pleasant and supportive atmosphere">הקורס מותאם אישית, מתקיים באווירה נעימה ותומכת</span>
+          <span data-he="קורס מותאם אישית באווירה נעימה ותומכת, בקליניקה פרטית ברמת בית שמש." data-en="A personalized course in a pleasant and supportive atmosphere, in a private clinic in Ramat Beit Shemesh.">קורס מותאם אישית באווירה נעימה ותומכת, בקליניקה פרטית ברמת בית שמש.</span>
+        </div>
+      </div>
+
+      <div class="kupot-band">
+        <div class="kupot-text">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span data-he="ניתן לקבל החזר מקופות החולים" data-en="Reimbursement available from health insurance funds">ניתן לקבל החזר מקופות החולים</span>
+        </div>
+        <div class="kupot-logos">
+          <img src="images/kupot/clalit.jpg" alt="כללית" loading="lazy">
+          <img src="images/kupot/maccabi.jpg" alt="מכבי" loading="lazy">
+          <img src="images/kupot/meuhedet.jpg" alt="מאוחדת" loading="lazy">
+          <img src="images/kupot/leumit.jpg" alt="לאומית" loading="lazy">
         </div>
       </div>
     </div>
@@ -1160,14 +1203,20 @@
         <img src="images/penina-photo.jpg" alt="פנינה שפלטר" class="about-image" loading="lazy">
         <div class="about-content">
           <h2 data-he="אודות" data-en="About">אודות</h2>
-          <h3 data-he="פנינה שפלטר - מיילדת מוסמכת ויועצת הנקה" data-en="Penina Spolter - Certified Midwife & Lactation Consultant">פנינה שפלטר - מיילדת מוסמכת ויועצת הנקה</h3>
+          <h3 data-he="פנינה שפלטר - אחות נשים, מיילדת מנוסה, יועצת הנקה, בודקת טהרה" data-en="Penina Spolter - Women's Nurse, Experienced Midwife, Lactation Consultant, Tahara Examiner">פנינה שפלטר - אחות נשים, מיילדת מנוסה, יועצת הנקה, בודקת טהרה</h3>
           <ul>
             <li data-he="מיילדת מוסמכת עם מעל 10 שנות ניסיון בבתי חולים במחלקות נשים, הריון בסיכון וחדר לידה." data-en="Certified midwife with over 10 years of hospital experience in women's departments, high-risk pregnancy, and delivery rooms.">מיילדת מוסמכת עם מעל 10 שנות ניסיון בבתי חולים במחלקות נשים, הריון בסיכון וחדר לידה.</li>
-            <li data-he="יועצת הנקה מוסמכת (IBCLC) ובודקת טהרה מוסמכת מכון פועה." data-en="Certified lactation consultant (IBCLC) and certified tahara examiner from Puah Institute.">יועצת הנקה מוסמכת (IBCLC) ובודקת טהרה מוסמכת מכון פועה.</li>
+            <li data-he="יועצת הנקה מוסמכת משרד הבריאות." data-en="Lactation consultant certified by the Ministry of Health.">יועצת הנקה מוסמכת משרד הבריאות.</li>
+            <li data-he="בודקת טהרה מוסמכת." data-en="Certified tahara examiner.">בודקת טהרה מוסמכת.</li>
             <li data-he="דוברת עברית ואנגלית ברמת שפת אם." data-en="Native speaker of both Hebrew and English.">דוברת עברית ואנגלית ברמת שפת אם.</li>
-            <li data-he="מיילדת מקצועית, סבלנית וקשובה, עם רצון עמוק להעניק לכל אישה חוויית לידה חיובית, בטוחה ומעצימה." data-en="A professional, patient, and attentive midwife with a deep desire to give every woman a positive, safe, and empowering birth experience.">מיילדת מקצועית, סבלנית וקשובה, עם רצון עמוק להעניק לכל אישה חוויית לידה חיובית, בטוחה ומעצימה.</li>
+            <li data-he="מיילדת מקצועית, סבלנית וקשובה, עם רצון עמוק להעניק לכל אישה ידע רחב שתהיה לה חוויית לידה חיובית, בטוחה ומעצימה." data-en="A professional, patient, and attentive midwife with a deep desire to give every woman the broad knowledge she needs for a positive, safe, and empowering birth experience.">מיילדת מקצועית, סבלנית וקשובה, עם רצון עמוק להעניק לכל אישה ידע רחב שתהיה לה חוויית לידה חיובית, בטוחה ומעצימה.</li>
           </ul>
         </div>
+      </div>
+
+      <div class="about-gallery">
+        <img src="images/penina-about-1.jpg" alt="פנינה שפלטר עם משפחה ויילוד" class="about-gallery-img portrait" loading="lazy">
+        <img src="images/penina-about-2.jpg" alt="פנינה שפלטר מעבירה קורס הכנה ללידה" class="about-gallery-img landscape" loading="lazy">
       </div>
     </div>
   </section>
@@ -1192,7 +1241,7 @@
           <blockquote data-he="&quot;לקחתי קורס הכנה ללידה עם פנינה, וזו הייתה אחת ההחלטות הכי טובות שעשיתי בהריון. היא ליוותה אותי במקצועיות, ברגישות ובסבלנות, ונתנה לי כלים מעשיים וגם הרבה ביטחון ושקט נפשי. הרגשתי שיש לי מישהי שמקשיבה באמת, עונה על כל שאלה ולא ממהרת לשום מקום. הקורס היה ברור, מחזק ומותאם אישית, ואני ממליצה עליה מכל הלב לכל אישה שמחפשת הכנה אמיתית ותומכת. הלידה שלי היתה מהירה וידעתי בדיוק מה מצופה בכל שלב ושלב.&quot;" data-en="&quot;I took a birth preparation course with Penina, and it was one of the best decisions I made during my pregnancy. She accompanied me with professionalism, sensitivity, and patience, giving me practical tools and a lot of confidence and peace of mind. I felt I had someone who truly listened, answered every question, and was never in a rush. The course was clear, empowering, and personalized, and I wholeheartedly recommend her to any woman looking for real, supportive preparation. My birth was fast, and I knew exactly what to expect at every stage.&quot;">"לקחתי קורס הכנה ללידה עם פנינה, וזו הייתה אחת ההחלטות הכי טובות שעשיתי בהריון. היא ליוותה אותי במקצועיות, ברגישות ובסבלנות, ונתנה לי כלים מעשיים וגם הרבה ביטחון ושקט נפשי. הרגשתי שיש לי מישהי שמקשיבה באמת, עונה על כל שאלה ולא ממהרת לשום מקום. הקורס היה ברור, מחזק ומותאם אישית, ואני ממליצה עליה מכל הלב לכל אישה שמחפשת הכנה אמיתית ותומכת. הלידה שלי היתה מהירה וידעתי בדיוק מה מצופה בכל שלב ושלב."</blockquote>
           <div class="testimonial-author">
             <div class="author-avatar">E</div>
-            <span class="author-name" data-he="Ellie Powitz" data-en="Ellie Powitz">Ellie Powitz</span>
+            <span class="author-name" data-he="Ellie P." data-en="Ellie P.">Ellie P.</span>
           </div>
         </div>
         <div class="testimonial-card">
@@ -1206,7 +1255,7 @@
           <blockquote data-he="&quot;ממליצה מאד!!!! פנינה נחמדה מאד ומסבירה בסבלנות, המלצתי עליה לעוד 2 חברות שהלכו אליה ונהנו ממש. הגעתי מוכנה ללידה ולא היה חסר לי שום ידע אפילו שהיתה לי לידה מסובכת הייתי רגועה כי לא היו מושגים שלא ידעתי עליהם לפני, וידע הוא כח. ממליצה מאד מאד!!!!!&quot;" data-en="&quot;Highly recommend!!!! Penina is very kind and explains patiently. I recommended her to 2 friends who went to her and really enjoyed it. I arrived prepared for birth and didn't lack any knowledge. Even though I had a complicated birth, I was calm because there were no concepts I didn't know about beforehand — and knowledge is power. Highly, highly recommend!!!!!&quot;">"ממליצה מאד!!!! פנינה נחמדה מאד ומסבירה בסבלנות, המלצתי עליה לעוד 2 חברות שהלכו אליה ונהנו ממש. הגעתי מוכנה ללידה ולא היה חסר לי שום ידע אפילו שהיתה לי לידה מסובכת הייתי רגועה כי לא היו מושגים שלא ידעתי עליהם לפני, וידע הוא כח. ממליצה מאד מאד!!!!!"</blockquote>
           <div class="testimonial-author">
             <div class="author-avatar">ש</div>
-            <span class="author-name" data-he="שולמית גולדשטין" data-en="Shulamit Goldstein">שולמית גולדשטין</span>
+            <span class="author-name" data-he="שולמית ג." data-en="Shulamit G.">שולמית ג.</span>
           </div>
         </div>
         <div class="testimonial-card">
@@ -1220,7 +1269,7 @@
           <blockquote data-he="&quot;סיימנו עכשיו קורס זוגי של הכנה ללידה אצל פנינה המהממת. חייבת להגיד שהשילוב המדהים בין ידע מקצועי, מדויק ומקיף לבין רכות וסבלנות - זה המתכון המנצח של פנינה! והכל מותאם לציבור החרדי (ולא רק...). יצאנו מהקורס עם כל הידע שצריך, בלי להחסיר שום פרט. ויותר מזה - עם רוגע וביטחון. זאת לידה ראשונה ובכל זאת אנחנו מרגישים יותר שמחה והתרגשות מאשר חששות. פנינה שמעה מה הפחדים שלי וניווטה אותם לעשייה יעילה ולטיפים טובים. מתכוונת להמליץ על פנינה לכל מי שאני מכירה. שגם אחרים יהנו...&quot;" data-en="&quot;We just finished a couples birth preparation course with the wonderful Penina. The amazing combination of professional, precise, and comprehensive knowledge with gentleness and patience — that's Penina's winning recipe! And everything is tailored to the Haredi community (and not only…). We left the course with all the knowledge we needed, without missing a single detail. And beyond that — with calm and confidence. This is a first birth, and yet we feel more joy and excitement than worry. Penina listened to my fears and channeled them into productive action and great tips. I plan to recommend Penina to everyone I know.&quot;">"סיימנו עכשיו קורס זוגי של הכנה ללידה אצל פנינה המהממת. חייבת להגיד שהשילוב המדהים בין ידע מקצועי, מדויק ומקיף לבין רכות וסבלנות - זה המתכון המנצח של פנינה! והכל מותאם לציבור החרדי (ולא רק...). יצאנו מהקורס עם כל הידע שצריך, בלי להחסיר שום פרט. ויותר מזה - עם רוגע וביטחון. זאת לידה ראשונה ובכל זאת אנחנו מרגישים יותר שמחה והתרגשות מאשר חששות. פנינה שמעה מה הפחדים שלי וניווטה אותם לעשייה יעילה ולטיפים טובים. מתכוונת להמליץ על פנינה לכל מי שאני מכירה. שגם אחרים יהנו..."</blockquote>
           <div class="testimonial-author">
             <div class="author-avatar">א</div>
-            <span class="author-name" data-he="אסתר ג'יאן" data-en="Esther Jian">אסתר ג'יאן</span>
+            <span class="author-name" data-he="אסתר ג'." data-en="Esther J.">אסתר ג'.</span>
           </div>
         </div>
         <div class="testimonial-card">
@@ -1234,7 +1283,7 @@
           <blockquote data-he="&quot;לפני הלידה הראשונה היו לנו הרבה פחדים וחששות. למזלנו קיבלנו המלצה חמה על מפגשי ההכנה ללידה עם פנינה. כבר בשיחה המקדימה הבנתי שאנחנו בידיים טובות, של אישה רגישה, אנושית ועם לב זהב. האווירה במפגשים הייתה מאוד נעימה, כל ההסברים ניתנו עם חיוך והרבה סבלנות. היה מקום לכל השאלות, אפילו לשאלות המביכות ביותר. התרשמנו מאוד גם מהמקצועיות ומהשילוב המושלם של ידע תיאורטי וניסיון מהשטח. ההסברים לוו בעזרים ויזואליים מושקעים וקיבלנו הרבה כלים מעשיים. בזכות מפגשי ההכנה הגענו ללידה הרבה יותר רגועים וממוקדים. ממליצים בחום!!!&quot;" data-en="&quot;Before our first birth we had many fears and worries. Fortunately we got a warm recommendation for Penina's birth preparation sessions. Already in the introductory call I understood we were in good hands — a sensitive, kind woman with a heart of gold. The atmosphere at the sessions was very pleasant, every explanation was given with a smile and lots of patience. There was room for every question, even the most embarrassing ones. We were also very impressed by the professionalism and the perfect blend of theoretical knowledge and real-world experience. Explanations were accompanied by thoughtful visual aids and we received many practical tools. Thanks to the preparation sessions, we arrived at the birth much calmer and more focused. Warmly recommended!&quot;">"לפני הלידה הראשונה היו לנו הרבה פחדים וחששות. למזלנו קיבלנו המלצה חמה על מפגשי ההכנה ללידה עם פנינה. כבר בשיחה המקדימה הבנתי שאנחנו בידיים טובות, של אישה רגישה, אנושית ועם לב זהב. האווירה במפגשים הייתה מאוד נעימה, כל ההסברים ניתנו עם חיוך והרבה סבלנות. היה מקום לכל השאלות, אפילו לשאלות המביכות ביותר. התרשמנו מאוד גם מהמקצועיות ומהשילוב המושלם של ידע תיאורטי וניסיון מהשטח. ההסברים לוו בעזרים ויזואליים מושקעים וקיבלנו הרבה כלים מעשיים. בזכות מפגשי ההכנה הגענו ללידה הרבה יותר רגועים וממוקדים. ממליצים בחום!!!"</blockquote>
           <div class="testimonial-author">
             <div class="author-avatar">ש</div>
-            <span class="author-name" data-he="שי וערן גוטמן" data-en="Shai & Eran Gutman">שי וערן גוטמן</span>
+            <span class="author-name" data-he="שי וערן ג." data-en="Shai & Eran G.">שי וערן ג.</span>
           </div>
         </div>
         <div class="testimonial-card">
@@ -1248,7 +1297,7 @@
           <blockquote data-he="&quot;הלידה שלי (לידה ראשונה) היתה שבועיים לפני התאריך ולא הייתי מוכנה, יצאתי מנופש לחדר לידה! הלידה הייתה מאוד רגועה ובלי לחץ, הייתי מוכנה וידעתי כל שלב בלידה ולא פחדתי - והכל בזכות הקורס של פנינה. בקורס למדתי על כל מהלך הלידה. פנינה אישה מיוחדת עם לב רחב, נתנה לי המון לפני הלידה - ידע, הסבר ורוגע. קורס מיוחד ביחס אישי עם מענה לכל שאלה והסבר מקיף על הכל מתוך רוגע בצורה מיוחדת! ובזכותה היה לי לידה רגועה! ממליצה לכל אחת שרוצה להיות רגועה בלידה, מוכנה ויודעת... אין מילים. פנינה תודה רבה!!!!!!&quot;" data-en="&quot;My first birth was two weeks before the due date and I wasn't ready — I went straight from vacation to the delivery room! The birth was very calm and without stress; I was ready and knew every stage and wasn't afraid — all thanks to Penina's course. In the course I learned the entire course of labor. Penina is a special woman with a generous heart who gave me so much before the birth — knowledge, explanation, and calm. A unique course with personal attention, an answer to every question, and a comprehensive, calming explanation of everything. Thanks to her I had a calm birth! I recommend her to anyone who wants to feel calm, prepared, and informed at her birth. No words. Penina, thank you so much!&quot;">"הלידה שלי (לידה ראשונה) היתה שבועיים לפני התאריך ולא הייתי מוכנה, יצאתי מנופש לחדר לידה! הלידה הייתה מאוד רגועה ובלי לחץ, הייתי מוכנה וידעתי כל שלב בלידה ולא פחדתי - והכל בזכות הקורס של פנינה. בקורס למדתי על כל מהלך הלידה. פנינה אישה מיוחדת עם לב רחב, נתנה לי המון לפני הלידה - ידע, הסבר ורוגע. קורס מיוחד ביחס אישי עם מענה לכל שאלה והסבר מקיף על הכל מתוך רוגע בצורה מיוחדת! ובזכותה היה לי לידה רגועה! ממליצה לכל אחת שרוצה להיות רגועה בלידה, מוכנה ויודעת... אין מילים. פנינה תודה רבה!!!!!!"</blockquote>
           <div class="testimonial-author">
             <div class="author-avatar">ת</div>
-            <span class="author-name" data-he="תהילה טופיק" data-en="Tehila Tofik">תהילה טופיק</span>
+            <span class="author-name" data-he="תהילה ט." data-en="Tehila T.">תהילה ט.</span>
           </div>
         </div>
         </div>
