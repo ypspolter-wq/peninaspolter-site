@@ -13,7 +13,7 @@
   <link rel="icon" type="image/png" href="images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Rubik:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Rubik:wght@300;400;500;600&family=Varela+Round&display=swap" rel="stylesheet">
   <style>
     /* ===== CSS Reset & Variables ===== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -97,7 +97,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 92px;
+      height: 108px;
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 24px;
@@ -116,7 +116,7 @@
     }
 
     .nav-logo img {
-      width: 60px;
+      width: 84px;
       height: auto;
     }
 
@@ -179,7 +179,7 @@
     .hero {
       display: flex;
       align-items: center;
-      padding-top: 120px;
+      padding-top: 140px;
       padding-bottom: 60px;
       background: linear-gradient(rgba(250, 249, 246, 0.5), var(--background));
     }
@@ -234,11 +234,12 @@
     }
 
     .hero-tagline {
-      font-family: var(--font-heading);
-      font-size: 2.6rem;
-      font-weight: 600;
+      font-family: 'Varela Round', 'Rubik', system-ui, sans-serif;
+      font-size: 2.3rem;
+      font-weight: 400;
       color: var(--primary);
-      line-height: 1.3;
+      line-height: 1.45;
+      letter-spacing: 0.2px;
       margin: 0;
     }
 
@@ -891,7 +892,7 @@
     .mobile-menu {
       display: none;
       position: fixed;
-      top: 92px;
+      top: 108px;
       right: 0;
       left: 0;
       background: var(--background-warm);
@@ -965,9 +966,12 @@
     }
 
     @media (max-width: 480px) {
-      .hero-tagline { font-size: 1.6rem; }
-      .nav-logo { font-size: 1.5rem; }
-      .nav-logo img { width: 48px; }
+      .nav-inner { height: 84px; }
+      .mobile-menu { top: 84px; }
+      .hero { padding-top: 120px; }
+      .hero-tagline { font-size: 1.5rem; }
+      .nav-logo { font-size: 1.4rem; gap: 10px; }
+      .nav-logo img { width: 52px; }
       .footer-inner { flex-direction: column; text-align: center; }
       .footer-links { flex-wrap: wrap; justify-content: center; }
       .footer-contact { flex-direction: column; align-items: center; }
