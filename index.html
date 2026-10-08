@@ -1518,12 +1518,17 @@
 
     // ===== Language Toggle =====
     let currentLang = 'he';
+    const pageTitles = {
+      he: document.title,
+      en: 'Birth Preparation Course | Penina Spolter – Midwife & Tahara Examiner, Ramat Beit Shemesh'
+    };
 
     function toggleLanguage() {
       currentLang = currentLang === 'he' ? 'en' : 'he';
       const html = document.documentElement;
       html.dir = currentLang === 'he' ? 'rtl' : 'ltr';
       html.lang = currentLang;
+      document.title = pageTitles[currentLang];
 
       document.getElementById('langHe').classList.toggle('active-lang', currentLang === 'he');
       document.getElementById('langEn').classList.toggle('active-lang', currentLang === 'en');
